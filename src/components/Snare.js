@@ -19,8 +19,7 @@ class Snare extends Component {
         stroke={this.props.color}
         strokeWidth="2"
         fill="none"
-        onMouseOver={this.props.stroke}
-        transform="matrix(1 0 0 1 0 0)"
+        onMouseMove={this.props.stroke}
         className="draggable"
       />
     );

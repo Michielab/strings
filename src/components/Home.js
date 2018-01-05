@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import Snare from "./Snare";
 // import Sound from "react";
 import Sound from "react-sound";
+import HighE from "../sounds/HighE.mp3";
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    // d = "M50 0 Q 50 80 50 160";
-    this.state = { eSnare: [[0, 80], [450, 80, 500, 80]] };
+    this.state = {
+      eSnare: [[0, 80], [450, 80, 500, 80]],
+      status: "STOPPED",
+      position: ""
+    };
   }
   strokes = color => {
     // this.setState({
@@ -19,6 +23,10 @@ class Home extends Component {
   };
 
   stroke = event => {
+    this.setState({
+      status: "PLAYING"
+    });
+
     var yPositionTop = 70;
     var yPositionBottom = 90;
     var count = 0;
@@ -87,19 +95,12 @@ class Home extends Component {
             note="e"
           /> */}
         </svg>
-        <audio controls autoPlay className="testing">
-          <source src="http://www.nihilus.net/soundtracks/Static%20Memories.mp3" />
-        </audio>
-
-        {/* <Sound
-          position={0}
-          url="http://www.nihilus.net/soundtracks/Static%20Memories.mp3"
-          playStatus={Sound.status.PLAYING}
+        <Sound
+          url={HighE}
+          position={this.state.positon}
+          playStatus={this.state.status}
           volume={100}
-          onLoading={this.handleSongLoading}
-          onPlaying={this.handleSongPlaying}
-          onFinishedPlaying={this.handleSongFinishedPlaying}
-        /> */}
+        />
       </div>
     );
   }
