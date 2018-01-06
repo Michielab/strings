@@ -35,3 +35,7 @@
   cursor: move;
   cursor: pointer;
 }
+
+.canvas {
+  background-color: beige;
+}

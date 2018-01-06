@@ -3,6 +3,9 @@ import Snare from "./Snare";
 // import Sound from "react";
 import Sound from "react-sound";
 import HighE from "../sounds/HighE.mp3";
+import HighEShort from "../sounds/HighEShort.mp3";
+import bla from "../sounds/bla2.mp3";
+import Guitar from "./Guitar";
 
 class Home extends Component {
   constructor(props) {
@@ -53,9 +56,17 @@ class Home extends Component {
     const dSnare = [[0, 140], [500, 140]];
     const aSnare = [[0, 160], [500, 160]];
     const eHSnare = [[0, 180], [500, 180]];
+
+    const guitar = [
+      [90, 200],
+      [0, 350, 90, 500],
+      [90, 500],
+      [105, 520, 120, 500],
+      [300, 500]
+    ];
     return (
       <div>
-        <svg width="900" height="320">
+        <svg width="900" height="900" className="canvas">
           <Snare
             vertices={this.state.eSnare}
             color="black"
@@ -64,6 +75,7 @@ class Home extends Component {
             note="e"
             drag={this.drag}
           />
+          <Guitar vertices={guitar} color="black" />
           {/* <Snare
             vertices={bSnare}
             color="black"
@@ -96,7 +108,7 @@ class Home extends Component {
           /> */}
         </svg>
         <Sound
-          url={HighE}
+          url={HighEShort}
           position={this.state.positon}
           playStatus={this.state.status}
           volume={100}
