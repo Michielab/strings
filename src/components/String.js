@@ -11,7 +11,10 @@ class String extends Component {
       this.props.vertices[1][0],
       this.props.vertices[1][1],
       this.props.vertices[1][2],
-      this.props.vertices[1][3]
+      this.props.vertices[1][3],
+      "L",
+      this.props.vertices[2][0],
+      this.props.vertices[2][1]
     ].join(" ");
     return (
       <path
@@ -21,7 +24,7 @@ class String extends Component {
         notesound={this.props.noteSound}
         strokeWidth="1.5"
         fill="none"
-        onClick={this.props.stroke}
+        onMouseEnter={this.props.stroke}
         note={this.props.note}
         className="draggable"
       />
@@ -32,8 +35,8 @@ class String extends Component {
 String.propTypes = {
   vertices: PropTypes.array,
   color: PropTypes.string,
-  note: PropTypes.string,
-  stroke: PropTypes.func
+  stroke: PropTypes.func,
+  note: PropTypes.string
 };
 
 export default String;
