@@ -6,10 +6,10 @@ import Sound from "react-sound";
 
 // import strings;
 import e from "../sounds/HighE.mp3";
-import b from "../sounds/B.mp3";
+import a from "../sounds/A.mp3";
 import d from "../sounds/D.mp3";
 import g from "../sounds/G.mp3";
-import a from "../sounds/A.mp3";
+import b from "../sounds/B.mp3";
 import E from "../sounds/E.mp3";
 
 // import HighEShort from "../sounds/HighEShort.mp3";
@@ -20,12 +20,12 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      eSnare: [[142, 278], [450, 286, 550, 287]],
-      bSnare: [[142, 310], [450, 310, 550, 307]],
-      gSnare: [[142, 302], [450, 304, 550, 302]],
-      dSnare: [[142, 294], [450, 298, 550, 297]],
+      ESnare: [[142, 278], [450, 286, 550, 287]],
       aSnare: [[142, 286], [450, 292, 550, 292]],
-      ESnare: [[142, 318], [450, 316, 550, 312]],
+      dSnare: [[142, 294], [450, 298, 550, 297]],
+      gSnare: [[142, 302], [450, 304, 550, 302]],
+      bSnare: [[142, 310], [450, 310, 550, 307]],
+      eSnare: [[142, 318], [450, 316, 550, 312]],
       status: "STOPPED",
       position: "",
       noteSound: ""
@@ -178,32 +178,11 @@ class Home extends Component {
             fill="white"
           />
           <String
-            vertices={this.state.eSnare}
+            vertices={this.state.ESnare}
             color="white"
             stroke={this.stroke}
-            note="e"
-            noteSound={e}
-          />
-          <String
-            vertices={this.state.bSnare}
-            color="white"
-            stroke={this.stroke}
-            note="b"
-            noteSound={b}
-          />
-          <String
-            vertices={this.state.gSnare}
-            color="white"
-            stroke={this.stroke}
-            note="g"
-            noteSound={g}
-          />
-          <String
-            vertices={this.state.dSnare}
-            color="white"
-            stroke={this.stroke}
-            note="d"
-            noteSound={d}
+            note="E"
+            noteSound={E}
           />
           <String
             vertices={this.state.aSnare}
@@ -213,12 +192,33 @@ class Home extends Component {
             noteSound={a}
           />
           <String
-            vertices={this.state.ESnare}
+            vertices={this.state.dSnare}
+            color="white"
+            stroke={this.stroke}
+            note="d"
+            noteSound={d}
+          />
+          <String
+            vertices={this.state.gSnare}
+            color="white"
+            stroke={this.stroke}
+            note="g"
+            noteSound={g}
+          />
+          <String
+            vertices={this.state.bSnare}
+            color="white"
+            stroke={this.stroke}
+            note="b"
+            noteSound={b}
+          />
+          <String
+            vertices={this.state.eSnare}
             color="white"
             stroke={this.stroke}
             dragStart={this.dragStart}
-            note="E"
-            noteSound={E}
+            note="e"
+            noteSound={e}
           />
         </svg>
         <Sound
