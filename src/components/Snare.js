@@ -16,8 +16,10 @@ class Snare extends Component {
     return (
       <path
         d={pathData}
+        vertices={this.props.vertices}
         stroke={this.props.color}
-        strokeWidth="1"
+        notesound={this.props.noteSound}
+        strokeWidth="1.5"
         fill="none"
         onClick={this.props.stroke}
         note={this.props.note}
