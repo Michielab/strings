@@ -17,9 +17,10 @@ class Snare extends Component {
       <path
         d={pathData}
         stroke={this.props.color}
-        strokeWidth="2"
+        strokeWidth="1"
         fill="none"
-        onMouseMove={this.props.stroke}
+        onClick={this.props.stroke}
+        note={this.props.note}
         className="draggable"
       />
     );
