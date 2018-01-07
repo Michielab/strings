@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Snare from "./Snare";
+import String from "./String";
 
 // import Sound from "react";
 import Sound from "react-sound";
@@ -177,42 +177,42 @@ class Home extends Component {
             strokeWidth="3"
             fill="white"
           />
-          <Snare
+          <String
             vertices={this.state.eSnare}
             color="white"
             stroke={this.stroke}
             note="e"
             noteSound={e}
           />
-          <Snare
+          <String
             vertices={this.state.bSnare}
             color="white"
             stroke={this.stroke}
             note="b"
             noteSound={b}
           />
-          <Snare
+          <String
             vertices={this.state.gSnare}
             color="white"
             stroke={this.stroke}
             note="g"
             noteSound={g}
           />
-          <Snare
+          <String
             vertices={this.state.dSnare}
             color="white"
             stroke={this.stroke}
             note="d"
             noteSound={d}
           />
-          <Snare
+          <String
             vertices={this.state.aSnare}
             color="white"
             stroke={this.stroke}
             note="a"
             noteSound={a}
           />
-          <Snare
+          <String
             vertices={this.state.ESnare}
             color="white"
             stroke={this.stroke}

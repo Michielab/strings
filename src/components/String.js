@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-class Snare extends Component {
+class String extends Component {
   render() {
     const pathData = [
       "M",
@@ -29,11 +29,11 @@ class Snare extends Component {
   }
 }
 
-Snare.propTypes = {
+String.propTypes = {
   vertices: PropTypes.array,
   color: PropTypes.string,
   note: PropTypes.string,
   stroke: PropTypes.func
 };
 
-export default Snare;
+export default String;
