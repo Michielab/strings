@@ -26,6 +26,7 @@ class String extends Component {
         fill="none"
         onMouseEnter={this.props.stroke}
         note={this.props.note}
+        onTouchStart={this.props.stroke}
         className="draggable"
       />
     );
