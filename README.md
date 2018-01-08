@@ -1,7 +1,5 @@
 Hi!
 
-This project is my first try with SVG. My goal was to make a string move and to play a sound when it's touched.
-When I had one string working I decided to make a guitar(at least I wanted to look a bit like a guitar.. :)).
-If you want to give it a try, then just click on the following link https://michielab.github.io/strings/
+This project is my first try with SVG. My goal was to make a string move and to play a sound when the string was touched. Once I had one string working I added a few more and decided to make a shape around it. I love the sound of a guitar, so I decided to make a guitar.
 
-have fun!
+Check for yourself if it can pass for a guitar! :) https://michielab.github.io/strings/
