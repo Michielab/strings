@@ -22,6 +22,7 @@ class String extends Component {
         vertices={this.props.vertices}
         stroke={this.props.color}
         notesound={this.props.noteSound}
+        yvalue={this.props.yValue}
         strokeWidth="1.5"
         fill="none"
         onMouseEnter={this.props.stroke}

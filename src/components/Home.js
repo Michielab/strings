@@ -31,7 +31,8 @@ class Home extends Component {
   stroke = event => {
     var string = event.target.getAttribute("note") + "Snare";
     var originalX = event.target.getAttribute("vertices").split(",")[2];
-    var originalY = event.target.getAttribute("vertices").split(",")[3];
+    var originalY = event.target.getAttribute("yvalue");
+
     var stringVertices = this.state[string];
     var yPositionBottom = stringVertices[1][1] - 0.3;
     var yPositionTop = stringVertices[1][1];
@@ -46,6 +47,7 @@ class Home extends Component {
       status: "PLAYING"
     });
 
+    console.log(originalY);
     var strokeSnare = setInterval(() => {
       count++;
       if (count > 10) {
@@ -92,11 +94,12 @@ class Home extends Component {
   };
 
   render() {
-    var strings = ["E", "a", "d", "g", "b", "e"];
+    var strings = ["e", "a", "d", "g", "b", "E"];
     var stringSounds = [E, a, d, g, b, e];
+    var yValues = [286, 292, 298, 304, 310, 316];
 
     return (
-      <div>
+      <div className="main-container">
         <svg width="900" height="900" className="canvas">
           <Guitar />
           {strings.map((string, index) => {
@@ -108,6 +111,7 @@ class Home extends Component {
                 note={string}
                 noteSound={stringSounds[index]}
                 key={index}
+                yValue={yValues[index]}
               />
             );
           })}
