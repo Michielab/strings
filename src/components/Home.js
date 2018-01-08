@@ -32,7 +32,6 @@ class Home extends Component {
     var string = event.target.getAttribute("note") + "Snare";
     var originalX = event.target.getAttribute("vertices").split(",")[2];
     var originalY = event.target.getAttribute("yvalue");
-
     var stringVertices = this.state[string];
     var yPositionBottom = stringVertices[1][1] - 0.3;
     var yPositionTop = stringVertices[1][1];
@@ -47,7 +46,6 @@ class Home extends Component {
       status: "PLAYING"
     });
 
-    console.log(originalY);
     var strokeSnare = setInterval(() => {
       count++;
       if (count > 10) {

@@ -24,6 +24,11 @@
 
 .main-container {
   background-color: beige;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 
 .draggable {
@@ -33,4 +38,5 @@
 
 .canvas {
   background-color: beige;
+  margin-left: 15%;
 }
