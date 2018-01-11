@@ -98,7 +98,7 @@ class Home extends Component {
 
     return (
       <div className="main-container">
-        <svg width="900" height="900" className="canvas">
+        <svg width="900" height="900" className="canvas" transform="scale(2)">
           <Guitar />
           {strings.map((string, index) => {
             return (
